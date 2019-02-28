@@ -6,8 +6,8 @@
 <meta name="generator" content="Hugo 0.54.0" />
 
 
-<title>About - A Hugo website</title>
-<meta property="og:title" content="About - A Hugo website">
+<title>Imagemagick - A Hugo website</title>
+<meta property="og:title" content="Imagemagick - A Hugo website">
 
 
   <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -19,6 +19,11 @@
 
 
 
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
 
 
 
@@ -59,15 +64,46 @@
 
   <article class="article">
     
+    <span class="article-duration">1 min read</span>
+    
 
-    <h1 class="article-title">About</h1>
+    <h1 class="article-title">Imagemagick</h1>
 
+    
+    <span class="article-date">2019-02-27</span>
     
 
     <div class="article-content">
-      <p>Hi, My name is Ying Zheng. I am taking STAT585 (<a href="https://stat585-at-isu.github.io">https://stat585-at-isu.github.io</a>) at Iowa State University. This is a toy site built using <code>blogdown</code> and <code>hugo</code> with <code>hugo-lithium-theme</code>.</p>
+      <p>Imagemagick is a life saver when you need to convert the format of figures.</p>
 
-<p>This is a &ldquo;hello world&rdquo; example website for the <a href="https://github.com/rstudio/blogdown"><strong>blogdown</strong></a> package. The theme was forked from <a href="https://github.com/jrutheiser/hugo-lithium-theme">@jrutheiser/hugo-lithium-theme</a> and modified by <a href="https://github.com/yihui/hugo-lithium">Yihui Xie</a>.</p>
+<ul>
+<li>install :</li>
+</ul>
+
+<p><a href="https://www.imagemagick.org/script/index.php">https://www.imagemagick.org/script/index.php</a></p>
+
+<ul>
+<li>example of converting</li>
+</ul>
+
+<pre><code>convert -units PixelsPerInch -density 600   SimPlot.wmf  image.png
+</code></pre>
+
+<ul>
+<li>white background to transparent (be cautious)</li>
+</ul>
+
+<pre><code>convert -density 600 -transparent white  SimPlot.wmf   trans_bg.png
+</code></pre>
+
+<ul>
+<li>transparent background to white
+<br /></li>
+</ul>
+
+<pre><code>convert  -background white -alpha remove  trans_bg.png   white_bg.png
+
+</code></pre>
 
     </div>
   </article>
@@ -90,6 +126,18 @@
 
     </div>
     
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
 
     
 
